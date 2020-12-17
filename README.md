@@ -1,2 +1,2 @@
 # pinger
-Just pinger, lol
+The most simple pinger
