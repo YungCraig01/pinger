@@ -9,12 +9,10 @@ echo   /_/\___/\___/ /_/  /_/_//_/\_, /\__/_/
 echo                             /___/          
 echo                                        (by YCG lol)
                                                                                                                         
-set /p IP=Zadej IP Adressu pro pinging:
-:top 
+set /p IP=Enter IP Address:
+:top
 PING -n 1 %IP% | FIND "TTL="
-title :: Pinging: %IP% ::
-IF ERRORLEVEL 1 (echo IP Is Shutdowned)
-set /a num=(%Random%%%9)+1
-color %num%
-ping -t 1 0 10 127.0.0.1 >
-GoTo top
+IF ERRORLEVEL 1 (SET in=0b & echo Shutdowned by YCG Pinger.) 
+color %in%
+ping -t 2 0 10 127.0.0.1 >nul
+GoTo top 
